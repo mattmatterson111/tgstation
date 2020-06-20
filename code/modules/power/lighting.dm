@@ -329,7 +329,10 @@
 			if(emergency_mode || (A && A.fire))
 				icon_state = "[base_state]_emergency"
 			else
-				icon_state = "[base_state]"
+				if(on)
+					icon_state = "[base_state]1"
+				else
+					icon_state = "[base_state]0"
 		if(LIGHT_EMPTY)
 			icon_state = "[base_state]-empty"
 		if(LIGHT_BURNED)
